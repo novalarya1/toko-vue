@@ -298,7 +298,6 @@ const changePassword = async () => {
 </script>
 
 <style scoped>
-/* STYLE TIDAK DIUBAH — SAMA PERSIS */
 .profile-wrapper {
   max-width: 1100px;
   margin: 40px auto;
