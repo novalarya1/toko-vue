@@ -2,8 +2,6 @@
   <div class="auth-page">
     <div class="auth-card">
       <img src="/img/Logo Horizontal.png" alt="Vintage" class="logo" />
-
-      <h3>Login to Vintage</h3>
       <p class="subtitle">Enter your details below</p>
 
       <form @submit.prevent="handleLogin">
