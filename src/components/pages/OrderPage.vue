@@ -236,25 +236,149 @@ const goToOrders = () => router.push({ path: '/profile', query: { tab: 'history'
 </script>
 
 <style scoped>
-.order-page { padding: 48px 0; }
-.box { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; }
-.box-title { font-weight: 600; margin-bottom: 16px; }
-.order-item { padding: 12px 0; border-bottom: 1px solid #e5e7eb; }
-.order-item:last-child { border-bottom: none; }
-.order-image { width: 64px; height: 64px; border-radius: 10px; object-fit: cover; }
-.summary-box { border: 1px solid #e5e7eb; border-radius: 12px; padding: 20px; position: sticky; top: 100px; }
-.summary-row { display: flex; justify-content: space-between; margin-bottom: 8px; }
-.summary-row.total { font-weight: 700; }
-.order-btn { width: 100%; background-color: #0f6b67; color: white; border: none; padding: 14px; border-radius: 10px; font-weight: 600; cursor: pointer; transition: 0.3s; }
-.order-btn:hover { background-color: #0c5c59; }
-.delivery-option, .payment-option { padding: 12px; border: 1px solid #e5e7eb; border-radius: 10px; margin-bottom: 8px; cursor: pointer; transition: 0.3s; }
-.delivery-option.active, .payment-option.active { border-color: #0f6b67; background-color: #f0fdfd; }
-.modal-overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); display: flex; align-items: center; justify-content: center; z-index: 9999; }
-.modal-card { background: white; width: 360px; padding: 32px 24px; border-radius: 14px; text-align: center; display: flex; flex-direction: column; align-items: center; }
-.modal-icon { width: 120px; height: auto; margin-bottom: 16px; animation: pop 0.4s ease-out; }
-.modal-btn { width: 100%; padding: 12px; border-radius: 8px; font-weight: 600; margin-top: 12px; cursor: pointer; }
-.modal-btn.primary { background-color: #0f6b67; color: white; border: none; }
-.modal-btn.outline { background: transparent; border: 1px solid #0f6b67; color: #0f6b67; }
-.checkmark { color: #0f6b67; font-weight: bold; }
-@keyframes pop { 0% { transform: scale(0.8); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+.order-page { 
+  padding: 48px 0; 
+}
+
+.box { 
+  border: 1px solid #e5e7eb; 
+  border-radius: 12px; 
+  padding: 20px; 
+}
+
+.box-title { 
+  font-weight: 600; 
+  margin-bottom: 16px; 
+}
+
+.order-item { 
+  padding: 12px 0; 
+  border-bottom: 1px solid #e5e7eb; 
+}
+
+.order-item:last-child { 
+  border-bottom: none; 
+}
+
+.order-image { 
+  width: 64px; 
+  height: 64px; 
+  border-radius: 10px; 
+  object-fit: cover; 
+}
+
+.summary-box { 
+  border: 1px solid #e5e7eb; 
+  border-radius: 12px; 
+  padding: 20px; 
+  position: sticky; 
+  top: 100px; 
+}
+
+.summary-row { 
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 8px; 
+}
+
+.summary-row.total { 
+  font-weight: 700; 
+}
+
+.order-btn { 
+  width: 100%; 
+  background-color: #0f6b67; 
+  color: white; 
+  border: none; 
+  padding: 14px; 
+  border-radius: 10px; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: 0.3s; 
+}
+
+.order-btn:hover { 
+  background-color: #0c5c59; 
+}
+
+.delivery-option, 
+.payment-option { 
+  padding: 12px; 
+  border: 1px solid #e5e7eb; 
+  border-radius: 10px; 
+  margin-bottom: 8px; 
+  cursor: pointer; 
+  transition: 0.3s; 
+}
+
+.delivery-option.active, 
+.payment-option.active { 
+  border-color: #0f6b67; 
+  background-color: #f0fdfd; 
+}
+
+.modal-overlay { 
+  position: fixed; 
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.6); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 9999; 
+}
+
+.modal-card { 
+  background: white; 
+  width: 360px; 
+  padding: 32px 24px; 
+  border-radius: 14px; 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.modal-icon { 
+  width: 120px; 
+  height: auto; 
+  margin-bottom: 16px; 
+  animation: pop 0.4s ease-out; 
+}
+
+.modal-btn { 
+  width: 100%; 
+  padding: 12px; 
+  border-radius: 8px; 
+  font-weight: 600; 
+  margin-top: 12px; 
+  cursor: pointer; 
+}
+
+.modal-btn.primary { 
+  background-color: #0f6b67; 
+  color: white; 
+  border: none; 
+}
+
+.modal-btn.outline { 
+  background: transparent; 
+  border: 1px solid #0f6b67; 
+  color: #0f6b67; 
+}
+
+.checkmark { 
+  color: #0f6b67; 
+  font-weight: bold; 
+}
+
+@keyframes 
+  pop { 0% { 
+    transform: scale(0.8); 
+    opacity: 0; 
+  } 
+  100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  } 
+}
 </style>
